@@ -242,11 +242,17 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="button" value="Submit" class="contact__button button">
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+
+                    <input type="hidden" name="access_key" value="c795b10e-96c2-455e-87f0-b48b41196e13">
+                
+                    <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                    <input type="number" name="phone" placeholder="Phone no." class="contact__input" required>
+                    <textarea name="message" cols="0" rows="10" class="contact__input" required></textarea>
+                    <button type="submit" class="contact__button button">Submit Form</button>
+                
                 </form>
             </div>
         </section>
@@ -257,7 +263,7 @@
         <div class="footer__social">
             <a href="https://www.facebook.com/sandeepkumar.gond.12764/" class="footer__icon" target="_blank"><i
                     class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/sandeepkr_02/"   class="footer__icon" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.instagram.com/sandeepkr_04/"   class="footer__icon" target="_blank"><i class='bx bxl-instagram'></i></a>
             <a href="https://twitter.com/KumarSande37678" class="footer__icon" target="_blank"><i class='bx bxl-twitter'></i></a>
         </div>
         <p class="footer__copy">&#169; Sandeep. All rigths reserved</p>
@@ -265,6 +271,7 @@
 
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script src="assets/js/main.js"></script>
 </body>
