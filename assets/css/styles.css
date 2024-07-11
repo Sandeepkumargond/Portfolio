@@ -61,7 +61,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 img {
@@ -88,7 +88,7 @@ img {
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color);
+  
 }
 
 .section {
@@ -420,6 +420,7 @@ img {
   body {
     margin: 0;
   }
+  
   .section {
     padding-top: 4rem;
     padding-bottom: 3rem;
@@ -483,4 +484,207 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+
+/*---------------------------Education & Internship---------------------------*/
+
+.education-content .row{
+  display: flex;
+  border-radius: 5px;
+
+}
+
+.education-content .title{
+  color: #5000fe;
+}
+.education-content .row .education,
+.education-content .row .internship
+{
+  color: #292929;
+  flex:0 0 50%;
+  max-width: 40%;
+  margin-top: 20px;
+  margin-left: auto;
+
+  
+} 
+.education-content  h3.title{
+  font-size:24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.education-content .row.timeline-box{
+  flex:0 0 100%;
+  max-width: 100%;  
+}
+.education-content .row .timeline{
+  /* background-color:#e5e5e5; */
+  padding: 30px 15px;
+  border: 1px solid #252424;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+}
+.education-content .row .timeline-item{
+  position:relative;
+  padding-left: 37px;
+  padding-bottom: 17px; 
+}
+.education-content .row  .internship .timeline-item{
+  position:relative;
+  padding-left: 37px;
+  padding-bottom: 0px; 
+}
+.education-content .row .timeline-item:last-child{
+  padding-bottom: 0;
+}
+.education-content .row .timeline-item::before{
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  top: 0;
+  background-color: #0400fe;  
+}
+.education-content .row .circle-dot{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #00f28d;
+}
+.education-content .row .timeline-title  {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.education-content .row .internship .timeline-title  {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.education-content .row .timeline-text{
+  line-height: 25px;
+  font-size: 16px;
+  text-align: justify;
+}
+.ee{
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/*---------------------------Projects---------------------------*/
+.project-content{
+  padding: 90px 0;
+  /* color:#fff;  */
+}
+.project-title{
+  margin-bottom: 60px;
+  text-align: center;
+}
+.project-title h4{
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--first-color);
+  margin-bottom: 20px;
+}
+.project-title p{
+  color: #000000;
+}
+.projects{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.project{
+    /* padding: 30px 15px; */
+    color: #282828;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    flex-basis: 32%;
+    transition: .3s;
+}
+.project i{
+  background-color: #1e00fe;
+  width: 60px;
+  height: 60px;
+  color: #000000;
+  font-size: 26px;
+  line-height: 60px;
+  border-radius: 50%;
+}
+.project h4{
+  font-size: 26px;
+  text-transform: capitalize;
+  margin: 20px 0;
+}
+.project p{
+  text-align: justify;
+}
+.project:hover{
+  border-color: #4c00ff;
+}
+
+
+
+
+.container{
+  width: 1170px;
+  margin:auto;
+}
+
+@media only screen and (max-width:767px){
+  .container{
+    width: 350px;
+  }
+
+  .education-content .row {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .education-content .row .education,
+  .education-content .row .internship {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .project{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+/* Medium layout */
+@media only screen and (min-width:1000px) and (max-width:1200px){
+  .container{
+    width: 970px;
+  }
+}
+/* tablet layout */
+@media only screen and (min-width:768px) and (max-width:999px){
+  .container{
+    width: 750px;
+  } 
+}  
+
+.link{
+  background-color: #2c26a1;
+  cursor: pointer;
+  color: white;
+  border-radius: 0px;
 }
