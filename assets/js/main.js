@@ -61,6 +61,30 @@ ScrollReveal({
     delay: 200
   });
 
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'bx-sun';
+
+const selectedTheme = localStorage.getItem('selected-theme');
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+  if (selectedTheme === 'dark') {
+    themeButton.querySelector('i').classList.replace('bx-moon', 'bx-sun');
+  }
+}
+
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle(darkTheme);
+  const currentTheme = getCurrentTheme();
+  localStorage.setItem('selected-theme', currentTheme);
+  const icon = themeButton.querySelector('i');
+  icon.classList.toggle('bx-moon');
+  icon.classList.toggle('bx-sun');
+});
+
   ScrollReveal().reveal(" .education", {
     origin: "top"
   });
